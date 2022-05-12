@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe ProductSpec, type: :model do
+RSpec.describe Product, type: :model do
   describe 'Validations' do
 
-    it 'Will save with all field submitted' do
+    it 'Will work with all fields submitted' do
     @category = Category.new
     @Product = Product.new
     @category.name = 'demo'
@@ -11,10 +11,7 @@ RSpec.describe ProductSpec, type: :model do
     @Product.price_cents = 530
     @Product.quantity = 5
     @Product.category = @category
-    expect(@Product.name).to be_present
-    expect(@Product.price).to be_present
-    expect(@Product.quantity).to be_present
-    expect(@Product.category).to be_present
+    expect(@Product).to be_valid
     end
     
     it 'Will have a name' do 
@@ -26,10 +23,11 @@ RSpec.describe ProductSpec, type: :model do
       @Product.quantity = 5
       @Product.category = @category
       expect(@Product).to_not be_valid
-     
+      expect(@Product.errors.full_messages).to eq ["Name can't be blank"]
+      
       @Product.name = 'demo'
       expect(@Product.name).to be_present
-      expect(@Product.errors.full_messages).to eq ["Name can't be blank"]
+     
     end 
     
     it 'Will have a price' do
