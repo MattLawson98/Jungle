@@ -1,6 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example. Jungle focuses on plant life sales but can be easily be pivoted to any other items. The project was tested using Rspec and Cypress!
+
+The page header looks like:
+![Header Image](https://github.com/MattLawson98/Jungle/blob/master/docs/TopNavBar.PNG?raw=true)
+
+You can filter through Jungle categories to see different types of plants:
+![Category Image](https://github.com/MattLawson98/Jungle/blob/master/docs/Categories.PNG?raw=true)
+
+Jungle allows users to login to their accounts:
+![Login Image](https://github.com/MattLawson98/Jungle/blob/master/docs/Login.PNG?raw=true)
+
+You can also create an account if you don't have one:
+![Sign-up Image](https://github.com/MattLawson98/Jungle/blob/master/docs/Sign-Up.PNG?raw=true)
+
+
 
 ## Setup
 
@@ -29,3 +43,5 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- Cypress 9.x
+- Rspec
