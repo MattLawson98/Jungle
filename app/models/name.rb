@@ -1,2 +1,2 @@
-class Name < ActiveRecord::Base
+class Name < ApplicationRecord
 end
